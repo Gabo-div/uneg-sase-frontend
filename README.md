@@ -1,18 +1,17 @@
 # Página de servicios estudiantiles
 
-Este repositorio constituye el segmento de interfaz de usuario de nuestro proyecto, cuyo objetivo es sustituir el sitio web de servicios estudiantiles de la Universidad Nacional Experimental de Guayana, el cual no satisface los requerimientos de los alumnos.
-
+Este repositorio constituye el segmento de interfaz de usuario de nuestro proyecto,
+cuyo objetivo es sustituir el sitio web de servicios estudiantiles de la
+Universidad Nacional Experimental de Guayana, el cual no satisface los requerimientos de los alumnos.
 
 ## Tecnologías
 
- - HTML, CSS y JavaScript
- - TypeScript
- - React
- - Next.js
- - Node.js
- - Tailwindcss
-
-
+- HTML, CSS y JavaScript
+- TypeScript
+- React
+- Next.js
+- Node.js
+- Tailwindcss
 
 ## Ejecución
 
@@ -42,5 +41,5 @@ Inicia el servidor de desarrollo
 
 ## Contribuciones
 
-Las contribuciones siempre son bienvenidas. Consulta el archivo `CONTRIBUTING.md` para obtener información sobre cómo comenzar.
-
+Las contribuciones siempre son bienvenidas. Consulta el archivo [`CONTRIBUTING.md`](CONTRIBUTING.md)
+para obtener información sobre cómo comenzar.
