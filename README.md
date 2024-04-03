@@ -1,3 +1,17 @@
+<div align="center">
+
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Pull Requests][pr-shield]][pr-url]
+[![Issues][issues-shield]][issues-url]
+
+</div>
+
+![Inicio de sesion](login_screen.png)
+
+---
+
 # Página de servicios estudiantiles
 
 Este repositorio constituye el segmento de interfaz de usuario de nuestro proyecto,
@@ -46,4 +60,15 @@ para obtener información sobre cómo comenzar.
 
 **¡Gracias a todos los colaboradores!**
 
-[![Contribuidores](https://contrib.rocks/image?repo=Gabo-div/uneg-sase-frontend)](https://github.com/Gabo-div/uneg-sase-frontend/graphs/contributors)
+[![Contribuidores](https://contrib.rocks/image?repo=Gabo-div/uneg-sase-frontend)](contributors-url)
+
+[contributors-shield]: https://img.shields.io/github/contributors/Gabo-div/uneg-sase-frontend.svg?style=for-the-badge
+[contributors-url]: https://github.com/Gabo-div/uneg-sase-frontend/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/Gabo-div/uneg-sase-frontend.svg?style=for-the-badge
+[forks-url]: https://github.com/Gabo-div/uneg-sase-frontend/network/members
+[stars-shield]: https://img.shields.io/github/stars/Gabo-div/uneg-sase-frontend.svg?style=for-the-badge
+[stars-url]: https://github.com/Gabo-div/uneg-sase-frontend/stargazers
+[pr-shield]: https://img.shields.io/github/issues-pr-closed/Gabo-div/uneg-sase-frontend.svg?style=for-the-badge
+[pr-url]: https://github.com/Gabo-div/uneg-sase-frontend/pulls
+[issues-shield]: https://img.shields.io/github/issues/Gabo-div/uneg-sase-frontend.svg?style=for-the-badge
+[issues-url]: https://github.com/Gabo-div/uneg-sase-frontend/issues
