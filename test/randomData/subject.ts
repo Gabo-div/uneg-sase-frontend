@@ -1,5 +1,5 @@
 import { faker } from '@faker-js/faker';
-import { Subject } from "@/models/subject";
+import { RegisteredSubject, Subject } from "@/models/subject";
 
 export const createRandomSubject = (): Subject => {
   return {
@@ -13,7 +13,7 @@ export const createRandomSubject = (): Subject => {
   } satisfies Subject
 }
 
-export const createRandomRegisteredSubject = (): Subject => {
+export const createRandomRegisteredSubject = (): RegisteredSubject => {
   return {
     ...createRandomSubject(),
     section: faker.number.int({ min: 1, max: 7 }),
