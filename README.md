@@ -43,3 +43,7 @@ Inicia el servidor de desarrollo
 
 Las contribuciones siempre son bienvenidas. Consulta el archivo [`CONTRIBUTING.md`](CONTRIBUTING.md)
 para obtener información sobre cómo comenzar.
+
+**¡Gracias a todos los colaboradores!**
+
+[![Contribuidores](https://contrib.rocks/image?repo=Gabo-div/uneg-sase-frontend)](https://github.com/Gabo-div/uneg-sase-frontend/graphs/contributors)
