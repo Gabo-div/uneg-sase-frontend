@@ -40,4 +40,7 @@ Inicia el servidor de desarrollo
   npm run dev
 ```
 
+## Contribuciones
+
+Las contribuciones siempre son bienvenidas. Consulta el archivo `CONTRIBUTING.md` para obtener información sobre cómo comenzar.
 
