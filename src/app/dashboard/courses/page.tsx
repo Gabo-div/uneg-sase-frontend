@@ -7,14 +7,18 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@/components/ui/table"
+} from "@/components/ui/table";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
-import { getStudentRegisteredSubjects, getStudentSubjects } from "@/services/subjects";
+import {
+  getStudentRegisteredSubjects,
+  getStudentSubjects,
+} from "@/services/subjects";
 import { groupSubjectsByCategory } from "@/utils/subject";
 
 export default async function Courses() {
-
-  const registeredSubjects = adaptRegisteredSubjects(await getStudentRegisteredSubjects());
+  const registeredSubjects = adaptRegisteredSubjects(
+    await getStudentRegisteredSubjects(),
+  );
   const allSubjects = adaptSubjects(await getStudentSubjects());
 
   const subjectCategory = groupSubjectsByCategory(allSubjects);
@@ -45,7 +49,7 @@ export default async function Courses() {
               <TableRow>
                 <TableHead>Materia</TableHead>
                 <TableHead>Sección</TableHead>
-                <TableHead>UC</TableHead>
+                <TableHead>UCs</TableHead>
                 <TableHead>Profesor</TableHead>
               </TableRow>
             </TableHeader>
@@ -56,20 +60,21 @@ export default async function Courses() {
                   <TableCell>{subject.name}</TableCell>
                   <TableCell>{subject.section}</TableCell>
                   <TableCell>{subject.uc}</TableCell>
-                  <TableCell className="whitespace-nowrap">{subject.teacher}</TableCell>
+                  <TableCell className="whitespace-nowrap">
+                    {subject.teacher}
+                  </TableCell>
                 </TableRow>
               ))}
             </TableBody>
           </Table>
         </Card>
-
       </TabsContent>
       <TabsContent value="pending">
         <Card className="p-4">
           <h2 className="mb-4 uppercase text-gray-700 text-sm font-medium dark:text-zinc-300">
             Materias Pendientes
           </h2>
-          <Table >
+          <Table>
             <TableHeader>
               <TableRow>
                 <TableHead>Materia</TableHead>
@@ -79,15 +84,13 @@ export default async function Courses() {
             </TableHeader>
 
             <TableBody>
-              {
-                subjectCategory.pending.map((subject) => (
-                  <TableRow key={subject.code}>
-                    <TableCell>{subject.name}</TableCell>
-                    <TableCell>{subject.uc}</TableCell>
-                    <TableCell></TableCell>
-                  </TableRow>
-                ))
-              }
+              {subjectCategory.pending.map((subject) => (
+                <TableRow key={subject.code}>
+                  <TableCell>{subject.name}</TableCell>
+                  <TableCell>{subject.uc}</TableCell>
+                  <TableCell></TableCell>
+                </TableRow>
+              ))}
             </TableBody>
           </Table>
         </Card>
@@ -97,7 +100,7 @@ export default async function Courses() {
           <h2 className="mb-4 uppercase text-gray-700 text-sm font-medium dark:text-zinc-300">
             Materias Aprobadas
           </h2>
-          <Table >
+          <Table>
             <TableHeader>
               <TableRow>
                 <TableHead>Materia</TableHead>
@@ -107,19 +110,16 @@ export default async function Courses() {
             </TableHeader>
 
             <TableBody>
-              {
-                subjectCategory.approved.map((subject) => (
-                  <TableRow key={subject.code}>
-                    <TableCell>{subject.name}</TableCell>
-                    <TableCell>{subject.uc}</TableCell>
-                    <TableCell></TableCell>
-                  </TableRow>
-                ))
-              }
+              {subjectCategory.approved.map((subject) => (
+                <TableRow key={subject.code}>
+                  <TableCell>{subject.name}</TableCell>
+                  <TableCell>{subject.uc}</TableCell>
+                  <TableCell></TableCell>
+                </TableRow>
+              ))}
             </TableBody>
           </Table>
         </Card>
-
       </TabsContent>
       <TabsContent value="failed">
         <Card className="p-4">
@@ -137,16 +137,14 @@ export default async function Courses() {
             </TableHeader>
 
             <TableBody>
-              {
-                subjectCategory.failed.map((subject) => (
-                  <TableRow key={subject.code}>
-                    <TableCell>{subject.name}</TableCell>
-                    <TableCell>{subject.uc}</TableCell>
-                    <TableCell>{subject.timesFailed}</TableCell>
-                    <TableCell>{subject.approved ? "Si" : "No"}</TableCell>
-                  </TableRow>
-                ))
-              }
+              {subjectCategory.failed.map((subject) => (
+                <TableRow key={subject.code}>
+                  <TableCell>{subject.name}</TableCell>
+                  <TableCell>{subject.uc}</TableCell>
+                  <TableCell>{subject.timesFailed}</TableCell>
+                  <TableCell>{subject.approved ? "Si" : "No"}</TableCell>
+                </TableRow>
+              ))}
             </TableBody>
           </Table>
         </Card>
