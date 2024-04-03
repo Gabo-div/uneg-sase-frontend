@@ -45,7 +45,7 @@ export default async function Courses() {
               <TableRow>
                 <TableHead>Materia</TableHead>
                 <TableHead>Sección</TableHead>
-                <TableHead>UC</TableHead>
+                <TableHead>UCs</TableHead>
                 <TableHead>Profesor</TableHead>
               </TableRow>
             </TableHeader>
@@ -73,7 +73,7 @@ export default async function Courses() {
             <TableHeader>
               <TableRow>
                 <TableHead>Materia</TableHead>
-                <TableHead>UC</TableHead>
+                <TableHead>UCs</TableHead>
                 <TableHead>Observaciones</TableHead>
               </TableRow>
             </TableHeader>
@@ -101,7 +101,7 @@ export default async function Courses() {
             <TableHeader>
               <TableRow>
                 <TableHead>Materia</TableHead>
-                <TableHead>UC</TableHead>
+                <TableHead>UCs</TableHead>
                 <TableHead>Nota</TableHead>
               </TableRow>
             </TableHeader>
@@ -130,7 +130,7 @@ export default async function Courses() {
             <TableHeader>
               <TableRow>
                 <TableHead>Materia</TableHead>
-                <TableHead>UC</TableHead>
+                <TableHead>UCs</TableHead>
                 <TableHead>Veces</TableHead>
                 <TableHead>Pendiente</TableHead>
               </TableRow>
