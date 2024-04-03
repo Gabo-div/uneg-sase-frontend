@@ -17,6 +17,6 @@ export const createRandomRegisteredSubject = (): RegisteredSubject => {
   return {
     ...createRandomSubject(),
     section: faker.number.int({ min: 1, max: 7 }),
-    teacher: faker.name.fullName(),
+    teacher: faker.person.fullName(),
   }
 }
