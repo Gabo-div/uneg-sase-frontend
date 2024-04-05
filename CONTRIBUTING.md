@@ -4,7 +4,7 @@ Nos alegra que estés leyendo esto, ya que el objetivo de este proyecto es contr
 
 A continuación una lista de recursos importantes:
 
-* [Pivotal Tracker](https://www.pivotaltracker.com/projects/2699720) es nuestra herramienta para organizar las tareas de nuestro proyecto.
+* [Página de Notion](https://sunny-whip-5cf.notion.site/Proyecto-SASE-769c43488b034b29829f0f481aec8983) donde organizamos las tareas de nuestro proyecto.
 * [Canal de telegram](https://t.me/+fZRFZnujUWNiOGMx) donde compartimos información acerca del proyecto.
 * [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) es la convención que utilizamos para nuestros commits.
 
