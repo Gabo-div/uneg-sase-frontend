@@ -16,13 +16,17 @@ export default function DashboardMenu() {
           { title: "Datos", href: "/" },
           { title: "Pensum", href: "/curriculum" },
           { title: "Asignaturas", href: "/courses" },
-          { title: "Constancias", href: "/certificates" },
+          { title: "Constancias y Planillas", href: "/certificates" },
         ]}
       />
       <DashboardLinksSection
         icon={<FaRegBuilding className="text-lg" />}
         title="Inscripción"
-        links={[{ title: "Registro de Deposito", href: "/payment" }]}
+        links={[
+          { title: "Cronograma", href: "/schedule" },
+          { title: "Registro de Deposito", href: "/payment" },
+          { title: "Registro de Asignaturas", href: "/inscription" },
+        ]}
       />
 
       <DashboardLinksSection
