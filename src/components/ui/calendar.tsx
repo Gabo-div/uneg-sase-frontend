@@ -2,6 +2,7 @@
 
 import * as React from "react"
 import { ChevronLeft, ChevronRight } from "lucide-react"
+import { es } from 'date-fns/locale';
 import { DayPicker } from "react-day-picker"
 
 import { cn } from "@/lib/utils"
@@ -17,13 +18,14 @@ function Calendar({
 }: CalendarProps) {
   return (
     <DayPicker
+      locale={es}
       showOutsideDays={showOutsideDays}
       className={cn("p-3", className)}
       classNames={{
         months: cn("flex flex-col sm:flex-row space-y-4 sm:space-x-4 sm:space-y-0", classNames.months),
         month: cn("space-y-4", classNames.month),
         caption: cn("flex justify-center pt-1 relative items-center", classNames.caption),
-        caption_label: cn("text-sm font-medium", classNames.caption_label),
+        caption_label: cn("text-sm font-medium capitalize", classNames.caption_label),
         nav: cn("space-x-1 flex items-center", classNames.nav),
         nav_button: cn(
           buttonVariants({ variant: "outline" }),
@@ -35,7 +37,7 @@ function Calendar({
         table: cn("w-full border-collapse space-y-1", classNames.table),
         head_row: cn("flex", classNames.head_row),
         head_cell:
-          cn("text-zinc-500 rounded-md w-9 font-normal text-[0.8rem] dark:text-zinc-400", classNames.head_cell),
+          cn("text-zinc-500 rounded-md w-9 font-normal text-[0.8rem] dark:text-zinc-400 capitalize", classNames.head_cell),
         row: cn("flex w-full mt-2", classNames.row),
         cell: cn("h-9 w-9 text-center text-sm p-0 relative [&:has([aria-selected].day-range-end)]:rounded-r-md [&:has([aria-selected].day-outside)]:bg-zinc-100/50 [&:has([aria-selected])]:bg-zinc-100 first:[&:has([aria-selected])]:rounded-l-md last:[&:has([aria-selected])]:rounded-r-md focus-within:relative focus-within:z-20 dark:[&:has([aria-selected].day-outside)]:bg-zinc-800/50 dark:[&:has([aria-selected])]:bg-zinc-800", classNames.cell),
         day: cn(
