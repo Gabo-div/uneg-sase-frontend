@@ -1,3 +1,3 @@
 export default function Security() {
-  return <div></div>
+	return <div></div>
 }
