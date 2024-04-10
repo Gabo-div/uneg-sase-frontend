@@ -3,7 +3,7 @@ export default {
 	printWidth: 80,
 	tabWidth: 2,
 	useTabs: true,
-	semi: false,
+	semi: true,
 	singleQuote: false,
 	quoteProps: "as-needed",
 	jsxSingleQuote: false,
