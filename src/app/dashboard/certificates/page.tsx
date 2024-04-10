@@ -1,6 +1,6 @@
-import { Button } from "@/components/ui/button"
-import { Card } from "@/components/ui/card"
-import { FaFilePdf } from "react-icons/fa6"
+import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
+import { FaFilePdf } from "react-icons/fa6";
 
 export default function Certificates() {
 	return (
@@ -45,5 +45,5 @@ export default function Certificates() {
 				</Button>
 			</Card>
 		</div>
-	)
+	);
 }

@@ -1,8 +1,8 @@
-import { User } from "@/models/user"
-import { faker } from "@faker-js/faker"
-import { createRandomPersonalData } from "./personalData"
-import { createRandomContactData } from "./contactData"
-import { createRandomAcademicData } from "./academicData"
+import { User } from "@/models/user";
+import { faker } from "@faker-js/faker";
+import { createRandomPersonalData } from "./personalData";
+import { createRandomContactData } from "./contactData";
+import { createRandomAcademicData } from "./academicData";
 
 export const createRandomStudentUser = (): User => {
 	return {
@@ -14,5 +14,5 @@ export const createRandomStudentUser = (): User => {
 			contactData: createRandomContactData(),
 			academicData: createRandomAcademicData(),
 		},
-	} satisfies User
-}
+	} satisfies User;
+};

@@ -1,5 +1,5 @@
-import { z } from "zod"
-import { studentSchema } from "./student"
+import { z } from "zod";
+import { studentSchema } from "./student";
 
 export const userSchema = z.object({
 	id: z.number(),
@@ -11,6 +11,6 @@ export const userSchema = z.object({
 			})
 			.merge(studentSchema),
 	]),
-})
+});
 
-export type User = z.infer<typeof userSchema>
+export type User = z.infer<typeof userSchema>;

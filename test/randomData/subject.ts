@@ -1,5 +1,5 @@
-import { faker } from "@faker-js/faker"
-import { RegisteredSubject, Subject } from "@/models/subject"
+import { faker } from "@faker-js/faker";
+import { RegisteredSubject, Subject } from "@/models/subject";
 
 export const createRandomSubject = (): Subject => {
 	return {
@@ -12,13 +12,13 @@ export const createRandomSubject = (): Subject => {
 		needed: Array.from({ length: faker.number.int({ min: 1, max: 3 }) }, () =>
 			faker.number.int({ min: 1, max: 50 }),
 		),
-	} satisfies Subject
-}
+	} satisfies Subject;
+};
 
 export const createRandomRegisteredSubject = (): RegisteredSubject => {
 	return {
 		...createRandomSubject(),
 		section: faker.number.int({ min: 1, max: 7 }),
 		teacher: faker.person.fullName(),
-	}
-}
+	};
+};

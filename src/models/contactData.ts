@@ -1,4 +1,4 @@
-import { z } from "zod"
+import { z } from "zod";
 
 export const contactDataSchema = z.object({
 	email: z.string(),
@@ -8,6 +8,6 @@ export const contactDataSchema = z.object({
 	alternativePhoneNumber: z.string(),
 	houseAddress: z.string(),
 	workAddress: z.string(),
-})
+});
 
-export type ContactData = z.infer<typeof contactDataSchema>
+export type ContactData = z.infer<typeof contactDataSchema>;

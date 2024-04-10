@@ -1,8 +1,8 @@
 type Props = {
-	title: string
-	children: React.ReactNode
-	asChild?: boolean
-}
+	title: string;
+	children: React.ReactNode;
+	asChild?: boolean;
+};
 
 export default function DashboardDataField({
 	title,
@@ -14,5 +14,5 @@ export default function DashboardDataField({
 			<p className="text-xs text-gray-600 dark:text-gray-500">{title}</p>
 			{asChild ? <>{children}</> : <p className="text-sm">{children}</p>}
 		</div>
-	)
+	);
 }

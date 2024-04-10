@@ -1,4 +1,4 @@
-import { z } from "zod"
+import { z } from "zod";
 
 export const subjectSchema = z.object({
 	code: z.number(),
@@ -8,13 +8,13 @@ export const subjectSchema = z.object({
 	needed: z.array(z.number()),
 	approved: z.boolean(),
 	timesFailed: z.number(),
-})
+});
 
-export type Subject = z.infer<typeof subjectSchema>
+export type Subject = z.infer<typeof subjectSchema>;
 
 export const registeredSubjectSchema = subjectSchema.extend({
 	section: z.number(),
 	teacher: z.string(),
-})
+});
 
-export type RegisteredSubject = z.infer<typeof registeredSubjectSchema>
+export type RegisteredSubject = z.infer<typeof registeredSubjectSchema>;

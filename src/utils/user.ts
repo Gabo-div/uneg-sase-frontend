@@ -1,17 +1,17 @@
-import { User } from "@/models/user"
+import { User } from "@/models/user";
 
-type Gender = User["data"]["personalData"]["gender"]
+type Gender = User["data"]["personalData"]["gender"];
 
 export const translateGender = (gender: Gender): string => {
 	const translatedGender: Record<Gender, string> = {
 		male: "Masculino",
 		female: "Femenino",
-	}
+	};
 
-	return translatedGender[gender]
-}
+	return translatedGender[gender];
+};
 
-type MaritalStatus = User["data"]["personalData"]["maritalStatus"]
+type MaritalStatus = User["data"]["personalData"]["maritalStatus"];
 
 export const translateMaritalStatus = (
 	maritalStatus: MaritalStatus,
@@ -21,7 +21,7 @@ export const translateMaritalStatus = (
 		married: "Casado",
 		divorced: "Divorciado",
 		widower: "Viudo",
-	}
+	};
 
-	return translatedStatus[maritalStatus]
-}
+	return translatedStatus[maritalStatus];
+};

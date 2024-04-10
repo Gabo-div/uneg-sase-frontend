@@ -1,15 +1,15 @@
-import { Badge } from "@/components/ui/badge"
-import { Card } from "@/components/ui/card"
+import { Badge } from "@/components/ui/badge";
+import { Card } from "@/components/ui/card";
 
-import { adaptUser } from "@/adapters/user"
-import { getStudentUser } from "@/services/user"
-import DashboardDataField from "@/components/DashboardDataField"
-import { translateGender, translateMaritalStatus } from "@/utils/user"
+import { adaptUser } from "@/adapters/user";
+import { getStudentUser } from "@/services/user";
+import DashboardDataField from "@/components/DashboardDataField";
+import { translateGender, translateMaritalStatus } from "@/utils/user";
 
 export default async function Dashboard() {
-	const studentUser = adaptUser(await getStudentUser())
+	const studentUser = adaptUser(await getStudentUser());
 
-	const { personalData, academicData, contactData } = studentUser.data
+	const { personalData, academicData, contactData } = studentUser.data;
 
 	return (
 		<div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -118,5 +118,5 @@ export default async function Dashboard() {
 				</div>
 			</Card>
 		</div>
-	)
+	);
 }

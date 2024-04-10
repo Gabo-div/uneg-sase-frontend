@@ -1,4 +1,4 @@
-import { z } from "zod"
+import { z } from "zod";
 
 export const academicDataSchema = z.object({
 	status: z.enum(["active", "inactive"]),
@@ -9,6 +9,6 @@ export const academicDataSchema = z.object({
 	totalUc: z.number(),
 	record: z.number(),
 	index: z.number(),
-})
+});
 
-export type AcademicData = z.infer<typeof academicDataSchema>
+export type AcademicData = z.infer<typeof academicDataSchema>;

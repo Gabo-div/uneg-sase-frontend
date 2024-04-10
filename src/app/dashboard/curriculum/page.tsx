@@ -1,5 +1,5 @@
-import { Badge } from "@/components/ui/badge"
-import { Card } from "@/components/ui/card"
+import { Badge } from "@/components/ui/badge";
+import { Card } from "@/components/ui/card";
 import {
 	Table,
 	TableBody,
@@ -7,22 +7,22 @@ import {
 	TableHeader,
 	TableRow,
 	TableCell,
-} from "@/components/ui/table"
+} from "@/components/ui/table";
 import {
 	Tooltip,
 	TooltipContent,
 	TooltipTrigger,
-} from "@/components/ui/tooltip"
-import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area"
-import React from "react"
+} from "@/components/ui/tooltip";
+import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
+import React from "react";
 
-import { adaptSubjects } from "@/adapters/subjects"
-import { getStudentSubjects } from "@/services/subjects"
-import { groupSubjectsBySemester } from "@/utils/subject"
+import { adaptSubjects } from "@/adapters/subjects";
+import { getStudentSubjects } from "@/services/subjects";
+import { groupSubjectsBySemester } from "@/utils/subject";
 
 export default async function Curriculum() {
-	const subjects = adaptSubjects(await getStudentSubjects())
-	const subjectsBySemester = groupSubjectsBySemester(subjects)
+	const subjects = adaptSubjects(await getStudentSubjects());
+	const subjectsBySemester = groupSubjectsBySemester(subjects);
 
 	return (
 		<div className="grid w-full grid-cols-1">
@@ -96,5 +96,5 @@ export default async function Curriculum() {
 				</Table>
 			</Card>
 		</div>
-	)
+	);
 }

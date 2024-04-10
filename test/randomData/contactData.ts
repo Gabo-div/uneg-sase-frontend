@@ -1,5 +1,5 @@
-import { ContactData } from "@/models/contactData"
-import { faker } from "@faker-js/faker"
+import { ContactData } from "@/models/contactData";
+import { faker } from "@faker-js/faker";
 
 export const createRandomContactData = (): ContactData => {
 	return {
@@ -10,5 +10,5 @@ export const createRandomContactData = (): ContactData => {
 		alternativePhoneNumber: faker.phone.number(),
 		houseAddress: faker.location.streetAddress(),
 		workAddress: faker.location.streetAddress(),
-	} satisfies ContactData
-}
+	} satisfies ContactData;
+};

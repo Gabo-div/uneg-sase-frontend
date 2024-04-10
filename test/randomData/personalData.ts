@@ -1,5 +1,5 @@
-import { PersonalData } from "@/models/personalData"
-import { faker } from "@faker-js/faker"
+import { PersonalData } from "@/models/personalData";
+import { faker } from "@faker-js/faker";
 
 export const createRandomPersonalData = (): PersonalData => {
 	return {
@@ -17,5 +17,5 @@ export const createRandomPersonalData = (): PersonalData => {
 		]),
 		birthDate: faker.date.birthdate().toISOString(),
 		birthPlace: faker.location.city(),
-	} satisfies PersonalData
-}
+	} satisfies PersonalData;
+};

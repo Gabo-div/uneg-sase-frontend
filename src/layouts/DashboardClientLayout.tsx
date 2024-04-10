@@ -1,46 +1,46 @@
-"use client"
+"use client";
 
-import { Button } from "@/components/ui/button"
-import { ScrollArea } from "@/components/ui/scroll-area"
-import { useEffect, useState } from "react"
-import { twJoin } from "tailwind-merge"
-import { IoMdMenu } from "react-icons/io"
-import ToggleTheme from "@/components/ToggleTheme"
-import { FaTimes } from "react-icons/fa"
+import { Button } from "@/components/ui/button";
+import { ScrollArea } from "@/components/ui/scroll-area";
+import { useEffect, useState } from "react";
+import { twJoin } from "tailwind-merge";
+import { IoMdMenu } from "react-icons/io";
+import ToggleTheme from "@/components/ToggleTheme";
+import { FaTimes } from "react-icons/fa";
 
 type Props = {
-	name: string
-	menu: React.ReactNode
-	page: React.ReactNode
-}
+	name: string;
+	menu: React.ReactNode;
+	page: React.ReactNode;
+};
 
-const defaultOpenWidth = 1280 // tailwind xl breakpoint
+const defaultOpenWidth = 1280; // tailwind xl breakpoint
 
 export default function DashboardClientLayout({ name, menu, page }: Props) {
-	const [open, setOpen] = useState(false)
+	const [open, setOpen] = useState(false);
 
 	useEffect(() => {
 		if (window.innerWidth >= defaultOpenWidth) {
-			setOpen(false)
+			setOpen(false);
 		}
-	}, [])
+	}, []);
 
 	const handleMenuClick = (e: React.MouseEvent) => {
-		const target = e.target as HTMLElement
+		const target = e.target as HTMLElement;
 
 		if (target.tagName !== "A") {
-			return
+			return;
 		}
 
 		if (window.innerWidth >= defaultOpenWidth) {
-			return
+			return;
 		}
 
-		setOpen(false)
-	}
+		setOpen(false);
+	};
 
-	const headerHeightClass = "h-16"
-	const headerSpaceClass = "pt-16"
+	const headerHeightClass = "h-16";
+	const headerSpaceClass = "pt-16";
 
 	return (
 		<div className="relative h-screen w-full">
@@ -96,5 +96,5 @@ export default function DashboardClientLayout({ name, menu, page }: Props) {
 				</ScrollArea>
 			</div>
 		</div>
-	)
+	);
 }

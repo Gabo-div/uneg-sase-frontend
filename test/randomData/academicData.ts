@@ -1,5 +1,5 @@
-import { AcademicData } from "@/models/academicData"
-import { faker } from "@faker-js/faker"
+import { AcademicData } from "@/models/academicData";
+import { faker } from "@faker-js/faker";
 
 export const createRandomAcademicData = (): AcademicData => {
 	return {
@@ -11,5 +11,5 @@ export const createRandomAcademicData = (): AcademicData => {
 		totalUc: faker.number.int({ min: 0, max: 100 }),
 		record: faker.number.int({ min: 1000000, max: 9999999 }),
 		index: faker.number.float({ min: 0, max: 10, fractionDigits: 2 }),
-	} satisfies AcademicData
-}
+	} satisfies AcademicData;
+};

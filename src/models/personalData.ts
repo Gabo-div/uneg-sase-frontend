@@ -1,4 +1,4 @@
-import { z } from "zod"
+import { z } from "zod";
 
 export const personalDataSchema = z.object({
 	ic: z.string(),
@@ -10,6 +10,6 @@ export const personalDataSchema = z.object({
 	maritalStatus: z.enum(["single", "married", "divorced", "widower"]),
 	birthDate: z.string(),
 	birthPlace: z.string(),
-})
+});
 
-export type PersonalData = z.infer<typeof personalDataSchema>
+export type PersonalData = z.infer<typeof personalDataSchema>;

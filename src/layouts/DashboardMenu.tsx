@@ -1,9 +1,9 @@
-import DashboardLinksSection from "@/layouts/DashboardLinksSection"
+import DashboardLinksSection from "@/layouts/DashboardLinksSection";
 
-import { AiOutlineFileText, AiOutlineIdcard } from "react-icons/ai"
-import { IoBriefcaseOutline, IoPersonOutline } from "react-icons/io5"
-import { BsPencilSquare } from "react-icons/bs"
-import { FaRegBuilding } from "react-icons/fa"
+import { AiOutlineFileText, AiOutlineIdcard } from "react-icons/ai";
+import { IoBriefcaseOutline, IoPersonOutline } from "react-icons/io5";
+import { BsPencilSquare } from "react-icons/bs";
+import { FaRegBuilding } from "react-icons/fa";
 
 export default function DashboardMenu() {
 	return (
@@ -79,5 +79,5 @@ export default function DashboardMenu() {
 				/>
 			</div>
 		</div>
-	)
+	);
 }

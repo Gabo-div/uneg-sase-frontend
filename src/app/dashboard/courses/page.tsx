@@ -1,5 +1,5 @@
-import { adaptRegisteredSubjects, adaptSubjects } from "@/adapters/subjects"
-import { Card } from "@/components/ui/card"
+import { adaptRegisteredSubjects, adaptSubjects } from "@/adapters/subjects";
+import { Card } from "@/components/ui/card";
 import {
 	Table,
 	TableBody,
@@ -7,21 +7,21 @@ import {
 	TableHead,
 	TableHeader,
 	TableRow,
-} from "@/components/ui/table"
-import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs"
+} from "@/components/ui/table";
+import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import {
 	getStudentRegisteredSubjects,
 	getStudentSubjects,
-} from "@/services/subjects"
-import { groupSubjectsByCategory } from "@/utils/subject"
+} from "@/services/subjects";
+import { groupSubjectsByCategory } from "@/utils/subject";
 
 export default async function Courses() {
 	const registeredSubjects = adaptRegisteredSubjects(
 		await getStudentRegisteredSubjects(),
-	)
-	const allSubjects = adaptSubjects(await getStudentSubjects())
+	);
+	const allSubjects = adaptSubjects(await getStudentSubjects());
 
-	const subjectCategory = groupSubjectsByCategory(allSubjects)
+	const subjectCategory = groupSubjectsByCategory(allSubjects);
 
 	return (
 		<Tabs defaultValue="pending" className="grid w-full grid-cols-1">
@@ -150,5 +150,5 @@ export default async function Courses() {
 				</Card>
 			</TabsContent>
 		</Tabs>
-	)
+	);
 }

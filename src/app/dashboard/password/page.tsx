@@ -1,13 +1,13 @@
-"use client"
+"use client";
 
-import { Button } from "@/components/ui/button"
-import { Card } from "@/components/ui/card"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
-import usePasswordStrengthChecker from "@/hooks/usePasswordStrengthChecker"
-import { FormEvent, useEffect, useState } from "react"
+import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import usePasswordStrengthChecker from "@/hooks/usePasswordStrengthChecker";
+import { FormEvent, useEffect, useState } from "react";
 
-import { FaTimes, FaCheck } from "react-icons/fa"
+import { FaTimes, FaCheck } from "react-icons/fa";
 
 export default function Password() {
 	const { check, results } = usePasswordStrengthChecker({
@@ -30,17 +30,17 @@ export default function Password() {
 				validator: (password: string) => /[a-z]/.test(password),
 			},
 		],
-	})
+	});
 
-	const [password, setPassword] = useState("")
+	const [password, setPassword] = useState("");
 
 	useEffect(() => {
-		check(password)
-	}, [password])
+		check(password);
+	}, [password]);
 
 	const onSubmit = (e: FormEvent) => {
-		e.preventDefault()
-	}
+		e.preventDefault();
+	};
 
 	return (
 		<Card className="flex flex-col gap-4">
@@ -86,5 +86,5 @@ export default function Password() {
 				</Button>
 			</form>
 		</Card>
-	)
+	);
 }

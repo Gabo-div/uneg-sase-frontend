@@ -1,12 +1,12 @@
-import moment from "moment"
-import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
-import { Calendar } from "@/components/ui/calendar"
+import moment from "moment";
+import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
+import { Calendar } from "@/components/ui/calendar";
 
 export default function Schedule() {
-	const registrationDate = moment().add(0, "day")
-	const registrationDateEnd = registrationDate.add(2, "hour")
+	const registrationDate = moment().add(0, "day");
+	const registrationDateEnd = registrationDate.add(2, "hour");
 
-	const isRegistrationPeriod = true
+	const isRegistrationPeriod = true;
 
 	if (!isRegistrationPeriod) {
 		return (
@@ -21,7 +21,7 @@ export default function Schedule() {
 					</AlertDescription>
 				</Alert>
 			</div>
-		)
+		);
 	}
 
 	return (
@@ -55,5 +55,5 @@ export default function Schedule() {
 				/>
 			</div>
 		</div>
-	)
+	);
 }

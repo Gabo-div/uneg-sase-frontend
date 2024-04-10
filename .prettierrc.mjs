@@ -15,4 +15,4 @@ export default {
 	rangeEnd: Infinity,
 	endOfLine: "lf",
 	plugins: ["prettier-plugin-tailwindcss"],
-}
+};

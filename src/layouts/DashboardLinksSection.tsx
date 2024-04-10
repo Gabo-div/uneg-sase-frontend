@@ -1,26 +1,26 @@
-"use client"
+"use client";
 
 import {
 	Collapsible,
 	CollapsibleContent,
 	CollapsibleTrigger,
-} from "@/components/ui/collapsible"
-import { FaChevronUp, FaChevronDown } from "react-icons/fa"
-import Link from "next/link"
-import { useState } from "react"
-import { Button } from "@/components/ui/button"
+} from "@/components/ui/collapsible";
+import { FaChevronUp, FaChevronDown } from "react-icons/fa";
+import Link from "next/link";
+import { useState } from "react";
+import { Button } from "@/components/ui/button";
 
 type Props = {
-	title: string
-	icon: React.ReactNode
+	title: string;
+	icon: React.ReactNode;
 	links: {
-		title: string
-		href: string
-	}[]
-}
+		title: string;
+		href: string;
+	}[];
+};
 
 export default function DashboardLinksSection({ title, icon, links }: Props) {
-	const [open, setOpen] = useState(false)
+	const [open, setOpen] = useState(false);
 	return (
 		<Collapsible open={open} onOpenChange={setOpen}>
 			<CollapsibleTrigger asChild>
@@ -52,5 +52,5 @@ export default function DashboardLinksSection({ title, icon, links }: Props) {
 				))}
 			</CollapsibleContent>
 		</Collapsible>
-	)
+	);
 }
