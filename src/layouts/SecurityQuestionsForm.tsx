@@ -31,20 +31,7 @@ export default function SecurityQuestionsForm() {
 		new Array(numberOfQuestions).fill(""),
 	);
 
-	const resetQuestion = (index: number) => {
-		setSelectValues((current) => current.with(index, undefined));
-		setInputValues((current) => current.with(index, ""));
-	};
-
 	const handleSelectChange = (value: string, index: number) => {
-		console.log(value);
-
-		const alreadySelectedIndex = selectValues.findIndex((v) => v === value);
-
-		if (alreadySelectedIndex != -1) {
-			resetQuestion(alreadySelectedIndex);
-		}
-
 		setSelectValues((current) => current.with(index, value));
 	};
 
@@ -73,11 +60,9 @@ export default function SecurityQuestionsForm() {
 						<SelectContent>
 							{securityQuestions.map((question) => (
 								<SelectItem
+									disabled={selectValues.some((value) => value === question)}
 									key={question}
-									value={question
-										.toLowerCase()
-										.normalize()
-										.replaceAll(" ", "-")}
+									value={question}
 								>
 									{question}
 								</SelectItem>
