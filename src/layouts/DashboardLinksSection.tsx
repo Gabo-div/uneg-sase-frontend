@@ -43,7 +43,7 @@ export default function DashboardLinksSection({ title, icon, links }: Props) {
 				{links.map((link) => (
 					<Button
 						key={link.title}
-						className="justify-start text-wrap pl-11"
+						className="text-wrap justify-start pl-11"
 						variant="ghost"
 						asChild
 					>
