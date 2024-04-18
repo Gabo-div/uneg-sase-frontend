@@ -18,40 +18,35 @@ export default async function Dashboard() {
 					Información Personal
 				</h2>
 				<div className="flex flex-col gap-[1px] bg-gray-100 dark:bg-gray-800">
-					<DashboardDataField title="Cedula" children={personalData.ic} />
-					<DashboardDataField
-						title="Nombres"
-						children={personalData.name + " " + personalData.secondName}
-					/>
-					<DashboardDataField
-						title="Apellidos"
-						children={personalData.lastName + " " + personalData.secondLastName}
-					/>
-					<DashboardDataField
-						title="Sexo"
-						asChild
-						children={
+					<DashboardDataField title="Cedula">
+						{personalData.ic}
+					</DashboardDataField>
+					<DashboardDataField title="Nombres">
+						{personalData.name + " " + personalData.secondName}
+					</DashboardDataField>
+					<DashboardDataField title="Apellidos">
+						{personalData.lastName + " " + personalData.secondLastName}
+					</DashboardDataField>
+					<DashboardDataField title="Sexo" asChild>
+						{
 							<Badge className="w-fit bg-blue-800">
 								{translateGender(personalData.gender)}
 							</Badge>
 						}
-					/>
-					<DashboardDataField
-						title="Estado Civil"
-						children={translateMaritalStatus(personalData.maritalStatus)}
-					/>
-					<DashboardDataField
-						title="Fecha de Nacimiento"
-						children={personalData.birthDate
+					</DashboardDataField>
+					<DashboardDataField title="Estado Civil">
+						{translateMaritalStatus(personalData.maritalStatus)}
+					</DashboardDataField>
+					<DashboardDataField title="Fecha de Nacimiento">
+						{personalData.birthDate
 							.split("T")[0]
 							.split("-")
 							.reverse()
 							.join("/")}
-					/>
-					<DashboardDataField
-						title="Lugar de Nacimiento"
-						children={personalData.birthPlace}
-					/>
+					</DashboardDataField>
+					<DashboardDataField title="Lugar de Nacimiento">
+						{personalData.birthPlace}
+					</DashboardDataField>
 				</div>
 			</Card>
 			<Card>
@@ -59,30 +54,31 @@ export default async function Dashboard() {
 					Información Académica
 				</h2>
 				<div className="flex flex-col gap-[1px] bg-gray-100 dark:bg-gray-800">
-					<DashboardDataField
-						title="Estatus"
-						asChild
-						children={
+					<DashboardDataField title="Estatus" asChild>
+						{
 							<Badge className="w-fit bg-blue-800">
 								{academicData.status === "active" ? "Activo" : "Inactivo"}
 							</Badge>
 						}
-					/>
-					<DashboardDataField title="Sede" children={academicData.campus} />
-					<DashboardDataField title="Carrera" children={academicData.career} />
-					<DashboardDataField
-						title="Expediente"
-						children={academicData.record}
-					/>
-					<DashboardDataField
-						title="UC Aprobados / Cursados"
-						children={`${academicData.approvedUc} / ${academicData.totalUc}`}
-					/>
-					<DashboardDataField title="Nivel" children={academicData.level} />
-					<DashboardDataField
-						title="Indice Academico"
-						children={academicData.index}
-					/>
+					</DashboardDataField>
+					<DashboardDataField title="Sede">
+						{academicData.campus}
+					</DashboardDataField>
+					<DashboardDataField title="Carrera">
+						{academicData.career}
+					</DashboardDataField>
+					<DashboardDataField title="Expediente">
+						{academicData.record}
+					</DashboardDataField>
+					<DashboardDataField title="UC Aprobados / Cursados">
+						{`${academicData.approvedUc} / ${academicData.totalUc}`}
+					</DashboardDataField>
+					<DashboardDataField title="Nivel">
+						{academicData.level}
+					</DashboardDataField>
+					<DashboardDataField title="Indice Academico">
+						{academicData.index}
+					</DashboardDataField>
 				</div>
 			</Card>
 			<Card className="sm:col-span-2 lg:col-span-1">
@@ -90,31 +86,27 @@ export default async function Dashboard() {
 					Información de Contacto
 				</h2>
 				<div className="flex flex-col gap-[1px] bg-gray-100 dark:bg-gray-800">
-					<DashboardDataField title="Correo" children={contactData.email} />
-					<DashboardDataField
-						title="Correo Alternativo"
-						children={contactData.alternativeEmail}
-					/>
-					<DashboardDataField
-						title="Correo UNEG"
-						children={contactData.universityEmail}
-					/>
-					<DashboardDataField
-						title="Telefono"
-						children={contactData.phoneNumber}
-					/>
-					<DashboardDataField
-						title="Telefono Alternativo"
-						children={contactData.alternativePhoneNumber}
-					/>
-					<DashboardDataField
-						title="Dirección"
-						children={contactData.houseAddress}
-					/>
-					<DashboardDataField
-						title="Dirección de Trabajo"
-						children={contactData.workAddress}
-					/>
+					<DashboardDataField title="Correo">
+						{contactData.email}
+					</DashboardDataField>
+					<DashboardDataField title="Correo Alternativo">
+						{contactData.alternativeEmail}
+					</DashboardDataField>
+					<DashboardDataField title="Correo UNEG">
+						{contactData.universityEmail}
+					</DashboardDataField>
+					<DashboardDataField title="Telefono">
+						{contactData.phoneNumber}
+					</DashboardDataField>
+					<DashboardDataField title="Telefono Alternativo">
+						{contactData.alternativePhoneNumber}
+					</DashboardDataField>
+					<DashboardDataField title="Dirección">
+						{contactData.houseAddress}
+					</DashboardDataField>
+					<DashboardDataField title="Dirección de Trabajo">
+						{contactData.workAddress}
+					</DashboardDataField>
 				</div>
 			</Card>
 		</div>
