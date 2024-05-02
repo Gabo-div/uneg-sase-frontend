@@ -32,6 +32,14 @@ export default function DashboardMenu() {
 							title: "Registro de Asignaturas",
 							href: "/inscription",
 						},
+						{
+							title: "Adición de Asignaturas",
+							href: "/addition",
+						},
+						{
+							title: "Retiro de Asignaturas",
+							href: "/withdraw",
+						},
 					]}
 				/>
 

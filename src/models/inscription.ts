@@ -15,3 +15,11 @@ export const inscriptionDataSchema = z.object({
 });
 
 export type InscriptionData = z.infer<typeof inscriptionDataSchema>;
+
+export const additionDataSchema = z.object({
+	registeredUC: z.number(),
+	availableUC: z.number(),
+	availableSubjects: z.array(availableToInscribeSubjectSchema),
+});
+
+export type AdditionData = z.infer<typeof additionDataSchema>;
