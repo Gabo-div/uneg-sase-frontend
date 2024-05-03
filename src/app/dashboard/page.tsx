@@ -29,7 +29,7 @@ export default async function Dashboard() {
 					</DashboardDataField>
 					<DashboardDataField title="Sexo" asChild>
 						{
-							<Badge className="w-fit bg-blue-800">
+							<Badge className="w-fit bg-primary-800">
 								{translateGender(personalData.gender)}
 							</Badge>
 						}
@@ -56,7 +56,7 @@ export default async function Dashboard() {
 				<div className="flex flex-col gap-[1px] bg-gray-100 dark:bg-gray-800">
 					<DashboardDataField title="Estatus" asChild>
 						{
-							<Badge className="w-fit bg-blue-800">
+							<Badge className="w-fit bg-primary-800">
 								{academicData.status === "active" ? "Activo" : "Inactivo"}
 							</Badge>
 						}

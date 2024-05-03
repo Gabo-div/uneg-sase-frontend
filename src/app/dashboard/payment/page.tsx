@@ -44,7 +44,7 @@ export default function Payment() {
 						<DialogTrigger asChild>
 							<Button
 								variant="link"
-								className="h-auto w-auto p-0 text-sm text-blue-500"
+								className="h-auto w-auto p-0 text-sm text-primary-500"
 							>
 								Más información
 							</Button>

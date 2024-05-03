@@ -13,7 +13,6 @@ import {
 	TooltipContent,
 	TooltipTrigger,
 } from "@/components/ui/tooltip";
-import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
 import React from "react";
 
 import { adaptSubjects } from "@/adapters/subjects";
@@ -73,7 +72,7 @@ export default async function Curriculum() {
 										</TableCell>
 										<TableCell>
 											{subject.approved ? (
-												<Badge className="bg-blue-800 hover:bg-blue-800 dark:bg-transparent dark:text-zinc-300">
+												<Badge className="bg-primary-800 hover:bg-primary-800 dark:bg-transparent dark:text-zinc-300">
 													Aprobada
 												</Badge>
 											) : (

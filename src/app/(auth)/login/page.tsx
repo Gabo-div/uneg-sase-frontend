@@ -43,20 +43,20 @@ export default function Login() {
 								</label>
 								<Input id="password" type="password" placeholder="Contraseña" />
 							</div>
-							<Button className="bg-blue-500 hover:bg-blue-500/90 dark:bg-zinc-800 dark:text-zinc-100 dark:hover:bg-zinc-700/80">
+							<Button className="bg-primary-800 hover:bg-primary-800/90 dark:bg-zinc-800 dark:text-zinc-100 dark:hover:bg-zinc-700/80">
 								Ingresar
 							</Button>
 						</form>
 
 						<div className="flex gap-3">
 							<Link
-								className="text-sm text-blue-500 hover:underline dark:text-blue-800"
+								className="text-sm text-primary-500 hover:underline dark:text-primary-800"
 								href="#"
 							>
 								¿Olvidó su contraseña?
 							</Link>
 							<Link
-								className="text-sm text-blue-500 hover:underline dark:text-blue-800"
+								className="text-sm text-primary-500 hover:underline dark:text-primary-800"
 								href="#"
 							>
 								¿Olvidó su usuario?
