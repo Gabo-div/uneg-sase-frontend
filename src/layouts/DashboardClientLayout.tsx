@@ -46,7 +46,7 @@ export default function DashboardClientLayout({ name, menu, page }: Props) {
 		<div className="relative h-screen w-full">
 			<div
 				className={twJoin(
-					"bg-pattern fixed top-0 z-10 flex h-16 w-full items-center px-8 text-gray-300 dark:border-b dark:border-zinc-800 dark:bg-zinc-950 dark:bg-none",
+					"fixed top-0 z-10 flex h-16 w-full items-center border-b bg-primary-900 px-8 text-gray-300 dark:border-b dark:border-zinc-800 dark:bg-zinc-950",
 					headerHeightClass,
 				)}
 			>
