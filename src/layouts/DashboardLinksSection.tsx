@@ -7,8 +7,10 @@ import {
 } from "@/components/ui/collapsible";
 import { FaChevronUp, FaChevronDown } from "react-icons/fa";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
+import { usePathname } from "next/navigation";
+import { twJoin } from "tailwind-merge";
 
 type Props = {
 	title: string;
@@ -21,11 +23,35 @@ type Props = {
 
 export default function DashboardLinksSection({ title, icon, links }: Props) {
 	const [open, setOpen] = useState(false);
+
+	const [isActive, setIsActive] = useState(false);
+
+	const path = usePathname();
+
+	const sectionPath = useRef(new Set<string>());
+
+	useEffect(() => {
+		setIsActive(sectionPath.current.has(path));
+	}, [path]);
+
+	useEffect(() => {
+		links.forEach((link) => {
+			sectionPath.current.add(
+				"/dashboard" + (link.href === "/" ? "" : link.href),
+			);
+		});
+	}, [links]);
+
 	return (
 		<Collapsible open={open} onOpenChange={setOpen}>
 			<CollapsibleTrigger asChild>
 				<Button
-					className="flex w-full items-center justify-between"
+					className={twJoin(
+						"flex w-full items-center justify-between",
+						isActive
+							? "bg-primary-100 hover:bg-primary-200 dark:bg-zinc-900 dark:hover:bg-zinc-800"
+							: "",
+					)}
 					variant="ghost"
 				>
 					<div className="flex items-center space-x-2">
@@ -43,7 +69,12 @@ export default function DashboardLinksSection({ title, icon, links }: Props) {
 				{links.map((link) => (
 					<Button
 						key={link.title}
-						className="text-wrap justify-start pl-11"
+						className={twJoin(
+							"text-wrap justify-start pl-11",
+							path === "/dashboard" + (link.href === "/" ? "" : link.href)
+								? "bg-primary-100 hover:bg-primary-200 dark:bg-zinc-900 dark:hover:bg-zinc-800"
+								: "",
+						)}
 						variant="ghost"
 						asChild
 					>
