@@ -23,3 +23,10 @@ export const additionDataSchema = z.object({
 });
 
 export type AdditionData = z.infer<typeof additionDataSchema>;
+
+export const withdrawDataSchema = z.object({
+	registeredUC: z.number(),
+	availableSubjects: z.array(availableToInscribeSubjectSchema),
+});
+
+export type WithdrawData = z.infer<typeof withdrawDataSchema>;
