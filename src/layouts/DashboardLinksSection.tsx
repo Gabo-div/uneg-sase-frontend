@@ -70,7 +70,7 @@ export default function DashboardLinksSection({ title, icon, links }: Props) {
 					<Button
 						key={link.title}
 						className={twJoin(
-							"text-wrap justify-start pl-11",
+							"h-auto justify-start pl-11",
 							path === "/dashboard" + (link.href === "/" ? "" : link.href)
 								? "bg-primary-100 hover:bg-primary-200 dark:bg-zinc-900 dark:hover:bg-zinc-800"
 								: "",
@@ -78,7 +78,9 @@ export default function DashboardLinksSection({ title, icon, links }: Props) {
 						variant="ghost"
 						asChild
 					>
-						<Link href={"/dashboard" + link.href}>{link.title}</Link>
+						<Link href={"/dashboard" + link.href}>
+							<span className="whitespace-normal">{link.title}</span>
+						</Link>
 					</Button>
 				))}
 			</CollapsibleContent>
